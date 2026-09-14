@@ -459,10 +459,8 @@
                             <span class="hb-h-name">Mr. Ali Mahrous</span>
                             <span class="hb-h-suffix">Secondary &amp; Preparatory</span>
                         </h1>
-                        <div class="hb-img-frame-photo" aria-hidden="true">
-                            <img src="ali-banner.png" alt="Mr. Ali Mahrous" class="hb-teacher-photo" />
-                            <div class="hb-photo-glow"></div>
-                            <div class="hb-photo-badge"><span>⭐ Top 4 Top</span></div>
+                        <div class="hb-img-frame">
+                            <img src="hero-ali-mahrous.jpg?v=20260914-0900" alt="Mr. Ali Mahrous — English Language Teacher" class="hb-img" loading="eager">
                         </div>
                     </div>
 

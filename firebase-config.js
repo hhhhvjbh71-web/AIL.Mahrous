@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════════════
 //  firebase-config.js — إعداد Firebase وتهيئة window.db
 //  منصة الأستاذ علي محروس لتعليم اللغة الإنجليزية
-//  Project: siond-a6c34
+//  Project: hamadaaboalhaj-a636c
 // ═══════════════════════════════════════════════════════════════════════
 //  هذا الملف يُحمَّل مرة واحدة في <head> قبل أي script آخر يعتمد على Firebase.
 //  يُعرِّف window.db (Firestore) و window.firebase لاستخدامها في الداشبورد.
@@ -12,13 +12,13 @@
 
     // ── إعدادات مشروع Firebase الرسمي ──────────────────────────────────
     var firebaseConfig = {
-        apiKey:            "AIzaSyBnaCO886pZQWvmFS8DKrqC1jqDrdT9_CM",
-        authDomain:        "siond-a6c34.firebaseapp.com",
-        projectId:         "siond-a6c34",
-        storageBucket:     "siond-a6c34.firebasestorage.app",
-        messagingSenderId: "875547108455",
-        appId:             "1:875547108455:web:47c497591012e6299be0c2",
-        measurementId:     "G-4L30TTMCT3"
+        apiKey:            "AIzaSyAwP8zCJ9rPyd4MJ1UOF6LTDGAWxnMFVTw",
+        authDomain:        "hamadaaboalhaj-a636c.firebaseapp.com",
+        projectId:         "hamadaaboalhaj-a636c",
+        storageBucket:     "hamadaaboalhaj-a636c.firebasestorage.app",
+        messagingSenderId: "643062774704",
+        appId:             "1:643062774704:web:bc6303a2627999fc967475",
+        measurementId:     "G-N2G1DY98JP"
     };
 
     // ── تهيئة Firebase مرة واحدة فقط ──────────────────────────────────
@@ -51,7 +51,7 @@
                 });
             } catch(e) {}
 
-            console.log('🔥 [firebase-config] ✅ Firebase جاهز — project: siond-a6c34 | db:', !!window.db);
+            console.log('🔥 [firebase-config] ✅ Firebase جاهز — project: hamadaaboalhaj-a636c | db:', !!window.db);
 
             // ── جلب الكورسات فوراً لأي زائر (بدون شرط تسجيل دخول) ──────────
             // هذا يضمن ظهور الكورسات في الصفحة الرئيسية حتى في Incognito

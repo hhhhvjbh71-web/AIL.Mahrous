@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════════════
 //  firebase-service.js — خدمة الربط بقاعدة بيانات Google Firebase
 //  منصة الأستاذ علي محروس لتعليم اللغة الإنجليزية
-//  Project: siond-a6c34
+//  Project: hamadaaboalhaj-a636c
 // ═══════════════════════════════════════════════════════════════════════
 
 (function (global) {
@@ -9,13 +9,13 @@
 
     // ── إعدادات Firebase الخاصة بالمشروع ──────────────────────────────
     const firebaseConfig = {
-        apiKey: "AIzaSyBnaCO886pZQWvmFS8DKrqC1jqDrdT9_CM",
-        authDomain: "siond-a6c34.firebaseapp.com",
-        projectId: "siond-a6c34",
-        storageBucket: "siond-a6c34.firebasestorage.app",
-        messagingSenderId: "875547108455",
-        appId: "1:875547108455:web:47c497591012e6299be0c2",
-        measurementId: "G-4L30TTMCT3"
+        apiKey: "AIzaSyAwP8zCJ9rPyd4MJ1UOF6LTDGAWxnMFVTw",
+        authDomain: "hamadaaboalhaj-a636c.firebaseapp.com",
+        projectId: "hamadaaboalhaj-a636c",
+        storageBucket: "hamadaaboalhaj-a636c.firebasestorage.app",
+        messagingSenderId: "643062774704",
+        appId: "1:643062774704:web:bc6303a2627999fc967475",
+        measurementId: "G-N2G1DY98JP"
     };
 
     let firebaseApp = null;
@@ -55,7 +55,7 @@
             window.firebase = firebase;
             firebaseAuth = firebase.auth ? firebase.auth() : null;
             isInitialized = true;
-            console.log('🔥 [Firebase] Connected successfully to project: siond-a6c34');
+            console.log('🔥 [Firebase] Connected successfully to project: hamadaaboalhaj-a636c');
 
             // بدء المزامنة الحية للبيانات
             startRealtimeSync();

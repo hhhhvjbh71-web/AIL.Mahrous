@@ -15,7 +15,7 @@
     content="Mr. Ali Mahrous, English courses, English revision, secondary school, preparatory school, grammar, vocabulary, reading, writing, Egypt English">
   <meta name="author" content="Mr. Ali Mahrous">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://siond-a6c34.web.app/">
+  <link rel="canonical" href="https://hamadaaboalhaj-a636c.web.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
@@ -23,7 +23,7 @@
   <meta property="og:title" content="Mr. Ali Mahrous — English Language Platform">
   <meta property="og:description"
     content="Educational platform — English language courses and revision for secondary and preparatory levels with Mr. Ali Mahrous. Simplified explanations and professional practice.">
-  <meta property="og:url" content="https://siond-a6c34.web.app/">
+  <meta property="og:url" content="https://hamadaaboalhaj-a636c.web.app/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mr. Ali Mahrous — English Language Platform">
@@ -36,7 +36,7 @@
       "name": "Mr. Ali Mahrous English Language Platform",
       "alternateName": ["Ali Mahrous Platform", "Mr. Ali Mahrous"],
       "description": "A specialised educational platform for the English Language at secondary and preparatory levels, managed by Mr. Ali Mahrous.",
-      "url": "https://siond-a6c34.web.app/",
+      "url": "https://hamadaaboalhaj-a636c.web.app/",
       "founder": {
         "@type": "Person",
         "name": "Mr. Ali Mahrous",
@@ -55,12 +55,12 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Mr. Ali Mahrous English Language Platform",
-      "url": "https://siond-a6c34.web.app/",
+      "url": "https://hamadaaboalhaj-a636c.web.app/",
       "description": "Mr. Ali Mahrous English Language Platform — courses and revision for secondary and preparatory levels",
       "inLanguage": "en",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://siond-a6c34.web.app/?q={search_term_string}",
+        "target": "https://hamadaaboalhaj-a636c.web.app/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -80,7 +80,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=20260914-1200">
+  <link rel="stylesheet" href="style.css?v=20260914-0900">
 
   <!-- ═══════════════════════════════════════════════════════════
          شاشة التحميل — هوية الأستاذ علي محروس (English Platform)
@@ -115,11 +115,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: max(20px, env(safe-area-inset-top)) 16px max(20px, env(safe-area-inset-bottom));
       font-family: 'Tajawal', 'Inter', sans-serif;
       opacity: 1;
       transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+      scrollbar-width: none;
     }
+    #iraqi-loader::-webkit-scrollbar { display: none; }
 
     #iraqi-loader.ld-hide {
       opacity: 0;
@@ -135,6 +139,13 @@
         radial-gradient(ellipse 60% 50% at 90% 100%, rgba(62,134,222, 0.14) 0%, transparent 55%),
         radial-gradient(ellipse 50% 40% at 10% 80%, rgba(29,99,196, 0.12) 0%, transparent 50%),
         linear-gradient(165deg, #0B1220 0%, #0F1F3D 45%, #0A1830 100%);
+      pointer-events: none;
+    }
+
+    #ld-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 75% 65% at 50% 48%, transparent 45%, rgba(2, 6, 15, 0.55) 100%);
       pointer-events: none;
     }
 
@@ -302,42 +313,6 @@
       color: rgba(116,174,236, 0.10);
     }
 
-    .lf9 {
-      top: 75%;
-      left: 5%;
-      --fl-sz: 13px;
-      --fl-dur: 8.5s;
-      --fl-del: 1.5s;
-      color: rgba(245,180,0, 0.16);
-    }
-
-    .lf10 {
-      top: 80%;
-      right: 6%;
-      --fl-sz: 26px;
-      --fl-dur: 9s;
-      --fl-del: 2.5s;
-      color: rgba(116,174,236, 0.14);
-    }
-
-    .lf11 {
-      top: 88%;
-      left: 8%;
-      --fl-sz: 12px;
-      --fl-dur: 6.5s;
-      --fl-del: 0.9s;
-      color: rgba(116,174,236, 0.24);
-    }
-
-    .lf12 {
-      top: 6%;
-      left: 40%;
-      --fl-sz: 15px;
-      --fl-dur: 14s;
-      --fl-del: 1s;
-      color: rgba(116,174,236, 0.10);
-    }
-
     @keyframes ldFloatDrift {
 
       0%,
@@ -384,6 +359,20 @@
       }
     }
 
+    @media (max-height: 680px) {
+      #ld-badge-wrap {
+        width: 116px;
+        height: 116px;
+        margin-bottom: 18px;
+      }
+      #ld-brand {
+        margin-bottom: 22px;
+      }
+      #ld-eng-title {
+        margin-bottom: 3px;
+      }
+    }
+
     /* Badge glass card background */
     #ld-graph-card {
       position: absolute;
@@ -396,7 +385,9 @@
       box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.20),
         0 8px 32px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 12px rgba(29, 99, 196, 0.10);
       opacity: 0;
       animation: ldCardIn 0.6s ease 0.3s forwards;
     }
@@ -421,6 +412,30 @@
     @keyframes ldRingDraw {
       to {
         stroke-dashoffset: 0;
+      }
+    }
+
+    #ld-badge-spin {
+      fill: none;
+      stroke: url(#ldSpinGrad);
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-dasharray: 60 430;
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ldSpinFade 0.5s ease 2.3s forwards, ldSpinRotate 3.2s linear 2.3s infinite;
+    }
+
+    @keyframes ldSpinFade {
+      to {
+        opacity: 0.85;
+      }
+    }
+
+    @keyframes ldSpinRotate {
+      to {
+        transform: rotate(360deg);
       }
     }
 
@@ -637,16 +652,31 @@
       box-shadow: 0 0 8px 2px rgba(245,180,0, 0.6);
     }
 
+    #ld-msg-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      opacity: 0;
+      animation: ldFadeUp 0.4s ease 1s forwards;
+    }
+
     #ld-msg {
       font-size: 12px;
       color: var(--ld-muted);
-      margin-top: 14px;
       font-weight: 500;
       min-height: 18px;
-      direction: rtl;
-      letter-spacing: 0.4px;
-      opacity: 0;
-      animation: ldFadeUp 0.4s ease 1s forwards;
+      letter-spacing: 0.3px;
+    }
+
+    #ld-pct {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--ld-gold2);
+      letter-spacing: 0.3px;
+      font-variant-numeric: tabular-nums;
+      min-width: 32px;
+      text-align: right;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -666,6 +696,11 @@
       #ld-badge-star {
         animation: none;
         opacity: 1;
+      }
+
+      #ld-badge-spin {
+        animation: none;
+        opacity: 0;
       }
 
       .ld-float,
@@ -709,6 +744,7 @@
   <div id="iraqi-loader" role="status" aria-label="Loading Mr. Ali Mahrous English Language Platform">
 
     <div id="ld-bg-gradient" aria-hidden="true"></div>
+    <div id="ld-vignette" aria-hidden="true"></div>
 
     <div id="ld-glow-orbs" aria-hidden="true">
       <div class="ld-orb ld-orb-1"></div>
@@ -719,24 +755,50 @@
 
     <div id="ld-word-floats" aria-hidden="true">
       <span class="ld-float lf1">Grammar</span>
-      <span class="ld-float lf2">A+</span>
-      <span class="ld-float lf3">Fluency</span>
+      <span class="ld-float lf2">Fluency</span>
+      <span class="ld-float lf3">Vocabulary</span>
       <span class="ld-float lf4">Speak</span>
       <span class="ld-float lf5">Read</span>
-      <span class="ld-float lf6">Vocabulary</span>
-      <span class="ld-float lf7">Write</span>
-      <span class="ld-float lf8">Listen</span>
-      <span class="ld-float lf9">“ ”</span>
-      <span class="ld-float lf10">ABC</span>
-      <span class="ld-float lf11">Confidence</span>
-      <span class="ld-float lf12">Aa</span>
+      <span class="ld-float lf6">Write</span>
+      <span class="ld-float lf7">Listen</span>
+      <span class="ld-float lf8">ABC</span>
     </div>
 
     <div id="ld-content">
 
-      <div id="ld-photo-wrap" aria-hidden="true">
-        <div id="ld-photo-ring"></div>
-        <img id="ld-photo-img" src="ali-banner.png" alt="Mr. Ali Mahrous" />
+      <div id="ld-badge-wrap" aria-hidden="true">
+        <div id="ld-graph-card"></div>
+        <svg id="ld-badge-svg" viewBox="0 0 168 168" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+          overflow="visible">
+          <defs>
+            <linearGradient id="ldRingGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#3E86DE" />
+              <stop offset="55%" stop-color="#74AEEC" />
+              <stop offset="100%" stop-color="#F5B400" />
+            </linearGradient>
+            <linearGradient id="ldLetterGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="60%" stop-color="#CFE0F7" />
+              <stop offset="100%" stop-color="#FFD53D" />
+            </linearGradient>
+            <linearGradient id="ldSpinGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FFD53D" stop-opacity="0" />
+              <stop offset="100%" stop-color="#FFD53D" stop-opacity="0.9" />
+            </linearGradient>
+          </defs>
+
+          <circle id="ld-badge-ring" cx="84" cy="84" r="78" />
+          <circle id="ld-badge-ring-inner" cx="84" cy="84" r="68" />
+          <circle id="ld-badge-spin" cx="84" cy="84" r="86" />
+
+          <text id="ld-badge-letters" x="84" y="102" text-anchor="middle"
+            style="font-family:'Inter',sans-serif;font-size:52px;font-weight:800;fill:url(#ldLetterGrad);letter-spacing:1px;">AM</text>
+
+          <g id="ld-badge-star">
+            <circle cx="84" cy="8" r="5.5" fill="rgba(245,180,0,0.22)" />
+            <circle cx="84" cy="8" r="3.2" fill="#F5B400" stroke="#0B1220" stroke-width="1" />
+          </g>
+        </svg>
       </div>
 
       <div id="ld-brand">
@@ -754,11 +816,9 @@
         <div id="ld-bar-track">
           <div id="ld-bar-fill"></div>
         </div>
-        <p id="ld-msg">Loading…</p>
-        <div id="ld-dots">
-          <div class="ld-dot"></div>
-          <div class="ld-dot"></div>
-          <div class="ld-dot"></div>
+        <div id="ld-msg-row">
+          <p id="ld-msg">Loading…</p>
+          <span id="ld-pct">0%</span>
         </div>
       </div>
 
@@ -781,24 +841,24 @@
          ════════════════════════════════════════════════ -->
 
   <!-- 1. إعداد Firebase -->
-  <script src="firebase-config.js?v=20260914-1200"></script>
-  <script src="firebase-service.js?v=20260914-1200"></script>
+  <script src="firebase-config.js?v=20260914-0900"></script>
+  <script src="firebase-service.js?v=20260914-0900"></script>
 
   <!-- 2. البيانات والمنطق المشترك -->
-  <script src="data.js?v=20260914-1200"></script>
+  <script src="data.js?v=20260914-0900"></script>
 
   <!-- 3. قوالب HTML — مفصولة عن المنطق -->
-  <script src="templates.js?v=20260914-1200"></script>
+  <script src="templates.js?v=20260914-0900"></script>
 
   <!-- 4. الجسر مع الداشبورد -->
-  <script src="dashboard-bridge.js?v=20260914-1200"></script>
+  <script src="dashboard-bridge.js?v=20260914-0900"></script>
 
   <!-- 5. التطبيق الرئيسي -->
-  <script src="app.js?v=20260914-1200"></script>
+  <script src="app.js?v=20260914-0900"></script>
 
   <!-- 6. Cache Busting — يجب أن يكون آخر script -->
   <!-- يتحقق تلقائياً من version.json ويُعيد التحميل عند وجود تحديث -->
-  <script src="cache-buster.js?v=20260914-1200"></script>
+  <script src="cache-buster.js?v=20260914-0900"></script>
 
   <!-- ═══════════════════════════════════════════════════════════
          زر لوحة التحكم + نافذة كلمة المرور (202020)
@@ -1037,6 +1097,7 @@
       var loader = document.getElementById('iraqi-loader');
       var bar = document.getElementById('ld-bar-fill');
       var msg = document.getElementById('ld-msg');
+      var pct = document.getElementById('ld-pct');
       if (!loader) return;
 
       var msgs = [
@@ -1048,11 +1109,34 @@
       ];
       var pcts = [20, 42, 62, 80, 95];
       var i = 0;
+      var pctCur = 0;
+      var pctRaf = null;
+
+      function animatePct(target) {
+        if (!pct) return;
+        if (pctRaf) cancelAnimationFrame(pctRaf);
+        var start = pctCur;
+        var t0 = performance.now();
+        var dur = 500;
+        function tick(now) {
+          var p = Math.min(1, (now - t0) / dur);
+          var eased = 1 - Math.pow(1 - p, 3);
+          pctCur = Math.round(start + (target - start) * eased);
+          pct.textContent = pctCur + '%';
+          if (p < 1) {
+            pctRaf = requestAnimationFrame(tick);
+          } else {
+            pctCur = target;
+          }
+        }
+        pctRaf = requestAnimationFrame(tick);
+      }
 
       function step() {
         if (i >= msgs.length) return;
         if (bar) bar.style.width = pcts[i] + '%';
         if (msg) msg.textContent = msgs[i];
+        animatePct(pcts[i]);
         i++;
       }
 
@@ -1066,6 +1150,7 @@
         if (!loader || !loader.parentNode) return;
         if (bar) bar.style.width = '100%';
         if (msg) msg.textContent = 'Welcome ✦';
+        animatePct(100);
         setTimeout(function () {
           loader.classList.add('ld-hide');
           if (typeof window.startHeroTypewriter === 'function') {
@@ -1077,7 +1162,7 @@
         }, 300);
       }
 
-      var minAt = Date.now() + 6000;
+      var minAt = Date.now() + 4200;
       function tryHide() {
         var delay = Math.max(0, minAt - Date.now());
         setTimeout(hide, delay);
@@ -1091,7 +1176,7 @@
 
       setTimeout(function () {
         if (loader && loader.parentNode) hide();
-      }, 12000);
+      }, 9000);
     })();
   </script>
 
