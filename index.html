@@ -80,7 +80,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=20260915-1500">
+  <link rel="stylesheet" href="style.css?v=20260916-1152">
 
   <!-- ═══════════════════════════════════════════════════════════
          شاشة التحميل — هوية الأستاذ علي محروس (English Platform)
@@ -734,6 +734,25 @@
       }
     }
   </style>
+
+  <!-- ═══════════════════════════════════════════════════════════
+         PWA — Progressive Web App
+         إضافة فوق النظام الحالي فقط — بدون التأثير على أي وظيفة موجودة
+         ═══════════════════════════════════════════════════════════ -->
+  <link rel="manifest" href="manifest.json?v=20260916-1152">
+  <meta name="theme-color" content="#1D63C4">
+  <meta name="application-name" content="Mr. Ali Mahrous">
+
+  <!-- iOS Safari PWA support (no manifest support) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mr. Ali Mahrous">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260916-1152">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20260916-1152">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=20260916-1152">
+  <link rel="shortcut icon" href="favicon.ico?v=20260916-1152">
 </head>
 
 
@@ -841,24 +860,27 @@
          ════════════════════════════════════════════════ -->
 
   <!-- 1. إعداد Firebase -->
-  <script src="firebase-config.js?v=20260915-1500"></script>
-  <script src="firebase-service.js?v=20260915-1500"></script>
+  <script src="firebase-config.js?v=20260916-1152"></script>
+  <script src="firebase-service.js?v=20260916-1152"></script>
 
   <!-- 2. البيانات والمنطق المشترك -->
-  <script src="data.js?v=20260915-1500"></script>
+  <script src="data.js?v=20260916-1152"></script>
 
   <!-- 3. قوالب HTML — مفصولة عن المنطق -->
-  <script src="templates.js?v=20260915-1500"></script>
+  <script src="templates.js?v=20260916-1152"></script>
 
   <!-- 4. الجسر مع الداشبورد -->
-  <script src="dashboard-bridge.js?v=20260915-1500"></script>
+  <script src="dashboard-bridge.js?v=20260916-1152"></script>
 
   <!-- 5. التطبيق الرئيسي -->
-  <script src="app.js?v=20260915-1500"></script>
+  <script src="app.js?v=20260916-1152"></script>
 
   <!-- 6. Cache Busting — يجب أن يكون آخر script -->
   <!-- يتحقق تلقائياً من version.json ويُعيد التحميل عند وجود تحديث -->
-  <script src="cache-buster.js?v=20260915-1500"></script>
+  <script src="cache-buster.js?v=20260916-1152"></script>
+
+  <!-- 7. PWA — تسجيل Service Worker + نافذة تثبيت التطبيق (إضافة مستقلة، لا تؤثر على ما سبق) -->
+  <script src="pwa-install.js?v=20260916-1152"></script>
 
   <!-- ═══════════════════════════════════════════════════════════
          زر لوحة التحكم + نافذة كلمة المرور (202020)

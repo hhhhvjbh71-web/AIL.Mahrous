@@ -53,8 +53,18 @@
             }).catch(function () { }));
         }
         if ('serviceWorker' in navigator) {
+            // ملاحظة (PWA): سابقاً كان يتم عمل unregister() هنا، وهذا كان
+            // سيُلغي تسجيل Service Worker الخاص بالـ PWA مع كل تحديث.
+            // الآن نستخدم update() بدلاً منه: يجبر المتصفح على جلب أحدث
+            // نسخة من sw.js فوراً، مع الحفاظ على التطبيق المثبّت كما هو.
+            // ضمان وصول الملفات الجديدة لم يتأثر إطلاقاً، لأن:
+            //   1) الـ Cache Storage تُمسح بالكامل في الخطوة السابقة.
+            //   2) reload(true) يجلب كل الملفات من السيرفر.
+            //   3) sw.js يعمل بنظام Network First (لا يخدم نسخة قديمة أبداً).
             tasks.push(navigator.serviceWorker.getRegistrations().then(function (regs) {
-                return Promise.all(regs.map(function (reg) { return reg.unregister(); }));
+                return Promise.all(regs.map(function (reg) {
+                    return reg.update().catch(function () { });
+                }));
             }).catch(function () { }));
         }
         tasks.length > 0 ? Promise.all(tasks).then(onDone).catch(onDone) : onDone();
